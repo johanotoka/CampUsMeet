@@ -1,19 +1,20 @@
+import React, { useState } from 'react';
 import './App.css';
+// eslint-disable-next-line
+import CalendarApp from './calendar';
+import Calendar from 'react-calendar'
+import 'react-calendar/dist/Calendar.css';
+
 
 function App() {
+  const [value, onChange] = useState(new Date());
+
   return (
-<<<<<<< HEAD
-    <div className="App">
-      
-      <h1 className="text-7xl">
-      Hello world!
-    </h1>
-      </div>      
-    
-=======
-    <h1>Hello World!</h1>
->>>>>>> 7cf51f5fe6143606897cf7c6ff66e3692319bad7
+    <div>
+      <Calendar onChange={onChange} value={value} />
+    </div>
   );
 }
 
 export default App;
+
