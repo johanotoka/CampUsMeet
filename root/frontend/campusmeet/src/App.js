@@ -68,14 +68,18 @@ export default class App extends React.Component {
   }
 
   render() {
-    return <WeekCalendar
-      startTime={moment({ h: 9, m: 0 })}
-      endTime={moment({ h: 15, m: 30 })}
-      numberOfDays={14}
-      selectedIntervals={this.state.selectedIntervals}
-      onIntervalSelect={this.handleSelect}
-      onIntervalUpdate={this.handleEventUpdate}
-      onIntervalRemove={this.handleEventRemove}
-    />
+    return <>
+      <title/>
+      <WeekCalendar
+        startTime={moment({ h: 9, m: 0 })}
+        endTime={moment({ h: 15, m: 30 })}
+        numberOfDays={14}
+        selectedIntervals={this.state.selectedIntervals}
+        onIntervalSelect={this.handleSelect}
+        onIntervalUpdate={this.handleEventUpdate}
+        onIntervalRemove={this.handleEventRemove}
+      />
+    </>
+    
   }
 }
